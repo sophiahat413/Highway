@@ -1,0 +1,56 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>statistics</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]
+		<script src="{% static "js/jquery.min.js" %}"></script>
+		<script src="{% static "js/skel.min.js" %}"></script>
+		<script src="{% static "js/skel-layers.min.js" %}"></script>
+		<script src="{% static "js/init.js" %}"></script>
+		<noscript> -->
+			<link type="text/css" rel="stylesheet" href="{% static "css/skel.css" %}" />
+			<link type="text/css" rel="stylesheet" href="{% static "css/style.css" %}" />
+			<link type="text/css" rel="stylesheet" href="{% static "css/style-xlarge.css" %}" />
+		<!--</noscript>  -->
+	</head>
+  <body>
+    <!-- Header -->
+		<header id="header">
+				<h1><a href="http://140.113.216.42:7999/index">CM</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="http://140.113.216.42:7999/index">Home</a></li>
+					</ul>
+				</nav>
+		</header>
+    <section id="main" class="wrapper">
+      <div class="container">
+        <header class="major">
+          <h2>Statistics</h2>
+        </header>
+      </div>
+      <div class="container 50%">
+        <div class="12u$">
+            <h1>全站資料統計 </h1>
+            現在資料共 {{AllDataCount}} 筆 <br><br>
+        </div>
+        <div class="12u$">
+          <h2>會員統計</h2>
+          註冊會員共{{AllUserCount}}位 <br>
+        </div>
+        <div class="12u$">
+          <h2>會員統計</h2>
+          <h2>行動網路</h2>
+        	LTE資料量 {{fourGCount}} / {{AllcellCount}} = {{fourGRatio}} %<br>
+        	WCDMA資料量 {{wcdmaCount}} / {{AllcellCount}} = {{wcdmaRatio}} %<br>
+        </div>
+      </div>
+    </section>
+
+  </body>
+</html>

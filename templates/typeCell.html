@@ -1,0 +1,258 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Transit by TEMPLATED</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]
+		<script src="{% static "js/jquery.min.js" %}"></script>
+		<script src="{% static "js/skel.min.js" %}"></script>
+		<script src="{% static "js/skel-layers.min.js" %}"></script>
+		<script src="{% static "js/init.js" %}"></script>
+		<noscript> -->
+			<link type="text/css" rel="stylesheet" href="{% static "css/skel.css" %}" />
+			<link type="text/css" rel="stylesheet" href="{% static "css/style.css" %}" />
+			<link type="text/css" rel="stylesheet" href="{% static "css/style-xlarge.css" %}" />
+		<!--</noscript>  -->
+	</head>
+
+	<body>
+    <!-- Header -->
+			<header id="header">
+				<h1><a href="http://140.113.216.42:7999/index">CM</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="http://140.113.216.42:7999/index">Home</a></li>
+					</ul>
+				</nav>
+			</header>
+  <section id="main" class="wrapper">
+    <div class="container">
+      <header class="major">
+        <h2>Info.</h2>
+        <p>Filling the information</p>
+      </header>
+    </div>
+    <div class="container 50%">
+      <form action="http://140.113.216.37/signal/getDataCellAllSelectCSV" method="get">
+				<div class="row uniform">
+            <div class="12u$">
+							<h3>*fromtime：</h3>
+              <input type="text" required id="fromtime" name="fromtime" value="" placeholder="ex.2016-01-01" maxlength=30 />
+            </div>
+            <div class="12u$">
+							<h3>*totime：</h3>
+              <input type="text" required id="ftotime" name="totime" value="" placeholder="ex.2016-01-01" maxlength=30 />
+            </div>
+            <div class="12u$">
+							<h3>timeZone：</h3>
+              <input type="text" id="timeZone" name="timeZone" value=""  maxlength=10 />
+            </div>
+            <div class="12u$">
+							<h3>useraccount：</h3>
+              <input type="text" id="useraccount" name="useraccount" value=""  maxlength=30 />
+            </div>
+            <div class="12u$">
+							<h3>equipmentId：</h3>
+              <input type="text" id="equipmentId" name="equipmentId" value=""  maxlength=20 />
+            </div>
+						<div class="6u 12u$(4)">
+							<h3>equipLat：</h3>
+              <input type="text" id="equipLat" name="equipLat" value=""  maxlength=15 />
+            </div>
+						<div class="6u 12u$(4)">
+							<h3>equipLng：</h3>
+              <input type="text" id="equipLng" name="equipLng" value=""  maxlength=15 />
+            </div>
+						<div class="12u$">
+							<h3>batteryLevel：</h3>
+              <input type="text" id="batteryLevel" name="batteryLevel" value=""  maxlength=5 />
+						</div>
+
+						<div class="12u$">
+							<h3>screen：</h3>
+						</div>
+						<div class="6u 12u$(4)">
+              <input type="radio" id="screen_on" name="screen" value="1" >
+              <label for="screen_on"><h3>on </h3></label>
+            </div>
+						<div class="6u 12u$(4)">
+              <input type="radio" id="screen_off" name="screen" value="0" >
+              <label for="screen_off"><h3>off </h3></label>
+            </div>
+
+						<div class="12u$">
+							<h3>lock：</h3>
+						</div>
+						<div class="6u 12u$(4)">
+              <input type="radio" id="lock_on" name="lock" value="1" >
+              <label for="lock_on"><h3>on </h3></label>
+            </div>
+						<div class="6u 12u$(4)">
+              <input type="radio" id="lock_off" name="lock" value="0" >
+              <label for="lock_off"><h3>off </h3></label>
+            </div>
+
+						<div class="12u$">
+							<h3>callID：</h3>
+              <input type="text" id="callID" name="callID" value=""  maxlength=50 />
+						</div>
+						<div class="12u$">
+							<h3>moveID：</h3>
+							<input type="text" id="moveID" name="moveID" value=""  maxlength=50 />
+						</div>
+						<div class="12u$">
+							<h3>moveTypeNum：</h3>
+							<input type="text" id="moveTypeNum" name="moveTypeNum" value=""  maxlength=2 />
+						</div>
+						<div class="12u$">
+							<h3>networkType：</h3>
+							<input type="text" id="networkType" name="networkType" value=""  maxlength=2 />
+						</div>
+
+						<div class="12u$">
+							<br><br>
+						</div>
+
+						<div class="6u 12u$(4)">
+              <input type="radio" id="serving cell" name="servingIndex" value="1" >
+              <label for="serving cell"><h3>serving cell</h3></label>
+            </div>
+						<div class="6u 12u$(4)">
+              <input type="radio" id="neighbor cell" name="servingIndex" value="0" >
+              <label for="neighbor cell"><h3>neighbor cell</h3></label>
+            </div>
+
+						<div class="12u$">
+							<h3>cell type：</h3>
+							<input type="text" id="cellType" name="cellType" value=""  maxlength=15 />
+						</div>
+						<div class="12u$">
+							<h3>cellId：</h3>
+							<input type="text" id="cellId" name="cellId" value=""  maxlength=15 />
+						</div>
+
+						<div class="6u 12u$(4)">
+							<h3>cellMCC：</h3>
+							<input type="text" id="cellMCC" name="cellMCC" value=""  maxlength=10 />
+						</div>
+						<div class="6u 12u$(4)">
+							<h3>cellMNC：</h3>
+							<input type="text" id="cellMNC" name="cellMNC" value=""  maxlength=10 />
+						</div>
+
+						<div class="6u 12u$(4)">
+							<h3>cellPCI：</h3>
+							<input type="text" id="cellPCI" name="cellPCI" value=""  maxlength=10 />
+						</div>
+						<div class="6u 12u$(4)">
+							<h3>cellTAC：</h3>
+							<input type="text" id="cellTAC" name="cellTAC" value=""  maxlength=10 />
+						</div>
+
+						<div class="6u 12u$(4)">
+							<h3>cellPSC：</h3>
+							<input type="text" id="cellPSC" name="cellPSC" value=""  maxlength=10 />
+						</div>
+						<div class="6u 12u$(4)">
+							<h3>cellLAC：</h3>
+							<input type="text" id="cellLAC" name="cellLAC" value=""  maxlength=10 />
+						</div>
+
+						<div class="12u$">
+							<br><br>
+						</div>
+
+						<div class="12u$">
+							<h3>sigstrength：</h3>
+							<input type="text" id="sigstrength" name="sigstrength" value=""  maxlength=5 />
+						</div>
+
+						<div class="12u$">
+							<br><br>
+						</div>
+
+						<div class="12u$">
+							<h3>RSRP：</h3>
+							<input type="text" id="RSRP" name="RSRP" value=""  maxlength=5 />
+						</div>
+						<div class="12u$">
+							<h3>RSSI：</h3>
+							<input type="text" id="RSSI" name="RSSI" value=""  maxlength=5 />
+						</div>
+						<div class="12u$">
+							<h3>SINR：</h3>
+							<input type="text" id="SINR" name="SINR" value=""  maxlength=5 />
+						</div>
+						<div class="12u$">
+							<h3>RSRQ：</h3>
+							<input type="text" id="RSRQ" name="RSRQ" value=""  maxlength=5 />
+						</div>
+
+						<div class="12u$">
+							<br><br>
+						</div>
+
+						<div class="12u$">
+                <input type="submit" value="OK">
+            </div>
+            <div class="12u$">
+                <a href="http://140.113.216.42:7999/index/getDataList/" class="button">Back</a>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+	<!--error message -->
+	<script>
+    var createAllErrors = function() {
+        var form = $( this ),
+            errorList = $( "ul.errorMessages", form );
+
+        var showAllErrorMessages = function() {
+            errorList.empty();
+
+            // Find all invalid fields within the form.
+            var invalidFields = form.find( ":invalid" ).each( function( index, node ) {
+
+                // Find the field's corresponding label
+                var label = $( "label[for=" + node.id + "] "),
+                    // Opera incorrectly does not fill the validationMessage property.
+                    message = node.validationMessage || 'Invalid value.';
+
+                errorList
+                    .show()
+                    .append( "<li><span>" + label.html() + "</span> " + message + "</li>" );
+            });
+        };
+
+        // Support Safari
+        form.on( "submit", function( event ) {
+            if ( this.checkValidity && !this.checkValidity() ) {
+                $( this ).find( ":invalid" ).first().focus();
+                event.preventDefault();
+            }
+        });
+
+        $( "input[type=submit], button:not([type=button])", form )
+            .on( "click", showAllErrorMessages);
+
+        $( "input", form ).on( "keypress", function( event ) {
+            var type = $( this ).attr( "type" );
+            if ( /date|email|month|number|search|tel|text|time|url|week/.test ( type )
+              && event.keyCode == 13 ) {
+                showAllErrorMessages();
+            }
+        });
+    };
+
+    $( "form" ).each( createAllErrors );
+	</script>
+
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!-- records.html -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Result</title>
+        <style>
+            body {
+               background-color: lightyellow;
+            }
+            em {
+                color: LightSeaGreen;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Results</h1>
+          {% for record in result_lists %}
+          <div><font face="標楷體">
+            id:{{ record.id }},
+            經度:{{ record.lon }},
+            緯度:{{ record.lat }},
+            國道{{ record.no }}號,
+            {{ record.inter }}
+          </font></div>
+          {% endfor %}
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Transit by TEMPLATED</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]
+		<script src="{% static "js/jquery.min.js" %}"></script>
+		<script src="{% static "js/skel.min.js" %}"></script>
+		<script src="{% static "js/skel-layers.min.js" %}"></script>
+		<script src="{% static "js/init.js" %}"></script>
+		<noscript> -->
+			<link type="text/css" rel="stylesheet" href="{% static "css/skel.css" %}" />
+			<link type="text/css" rel="stylesheet" href="{% static "css/style.css" %}" />
+			<link type="text/css" rel="stylesheet" href="{% static "css/style-xlarge.css" %}" />
+		<!--</noscript>  -->
+	</head>
+
+	<body>
+    <!-- Header -->
+			<header id="header">
+				<h1><a href="http://140.113.216.42:7999/index">CM</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="http://140.113.216.42:7999/index">Home</a></li>
+					</ul>
+				</nav>
+			</header>
+  <section id="main" class="wrapper">
+    <div class="container">
+      <header class="major">
+        <h2>List</h2>
+        <p>Choose one statistics to see</p>
+      </header>
+    </div>
+    <div class="container 50%">
+      <form action="/statisticsSelect" method="get">
+        <div class="row uniform">
+            <div class="12u$">
+              <input type="radio" id="all" name="type" value="all" >
+              <label for="all"><h3>All</h3></label>
+            </div>
+            <div class="12u$">
+              <input type="radio" id="user" name="type" value="user" >
+              <label for="user"><h3>User</h3></label>
+            </div>
+            <div class="12u$">
+              <input type="radio" id="app" name="type" value="app" >
+              <label for="app"><h3>Application</h3></label>
+            </div>
+            <div class="12u$">
+              <input type="radio" id="appforday" name="type" value="appforday" >
+              <label for="appforday"><h3>Application in a Day</h3></label>
+            </div>
+
+            <div class="12u$">
+                <input type="submit" value="OK">
+            </div>
+            <div class="12u$">
+                <a href="http://140.113.216.42:7999/index" class="button">Back</a>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  </body>
+</html>
